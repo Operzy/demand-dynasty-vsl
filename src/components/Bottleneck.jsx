@@ -65,7 +65,7 @@ const Bottleneck = () => {
         <div className="relative w-full max-w-5xl mx-auto flex justify-center py-10">
           
           {/* The SVG Funnel/Bottleneck Background */}
-          <div className="hidden md:flex absolute inset-y-0 w-[400px] left-1/2 -translate-x-1/2 justify-center overflow-visible z-0 pointer-events-none">
+          <div className="absolute inset-y-0 w-[300px] md:w-[400px] left-1/2 -translate-x-1/2 flex justify-center overflow-visible z-0 pointer-events-none">
             <svg viewBox="0 0 400 1200" className="w-full h-full" preserveAspectRatio="none">
               {/* Funnel Fill */}
               <path 

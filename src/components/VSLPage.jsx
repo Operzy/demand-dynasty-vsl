@@ -101,6 +101,7 @@ const VSLPage = ({ onOpenQualifier }) => {
         
         <p className="hidden md:block text-base md:text-lg text-brand-text max-w-4xl mb-12 hero-elem font-light leading-relaxed relative z-10">
           We build and manage your complete B2B client acquisition system end-to-end: <strong className="font-semibold text-brand-light">high-converting Video Sales Letters, targeted Meta ad campaigns, and automated GoHighLevel CRM routing</strong> so you wake up to qualified appointments on your calendar.
+          <span className="block mt-4 text-sm text-brand-accent/80 font-medium tracking-wide uppercase">100% confidential. No obligation.</span>
         </p>
 
         {/* VIDEO PLAYER */}
@@ -116,12 +117,9 @@ const VSLPage = ({ onOpenQualifier }) => {
         </div>
 
         <div className="flex flex-col items-center gap-4 hero-elem">
-          <Button onClick={onOpenQualifier} className="text-lg">
-            Apply To Book Your Strategy Session
+          <Button onClick={onOpenQualifier} className="text-lg w-auto whitespace-nowrap">
+            Book Your Strategy Session
           </Button>
-          <span className="text-sm text-brand-text flex items-center gap-2">
-            <Shield size={14} /> 100% Confidential. No Obligation.
-          </span>
         </div>
       </section>
 
