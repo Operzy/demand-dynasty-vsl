@@ -81,30 +81,30 @@ const VSLPage = ({ onOpenQualifier }) => {
     <div ref={containerRef} className="w-full flex flex-col items-center relative z-10">
       
       {/* HEADER / NAVIGATION (Minimal) */}
-      <header className="w-full max-w-6xl mx-auto px-6 py-4 flex justify-center items-center hero-elem">
+      <header className="w-full max-w-6xl mx-auto px-6 py-2 md:py-4 flex justify-center items-center hero-elem">
         <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="Demand Dynasty" className="h-12 md:h-16 w-auto object-contain" />
+          <img src="/logo.png" alt="Demand Dynasty" className="h-8 md:h-16 w-auto object-contain" />
         </div>
       </header>
 
       {/* HERO SECTION */}
-      <section className="w-full max-w-5xl mx-auto px-6 pt-4 pb-16 flex flex-col items-center text-center relative overflow-hidden">
+      <section className="w-full max-w-5xl mx-auto px-6 pt-2 pb-8 md:pt-4 md:pb-16 flex flex-col items-center text-center relative overflow-hidden">
         
-        <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-brand-accent/20 bg-brand-card text-brand-accent text-xs font-bold uppercase tracking-widest mb-8 hero-elem shadow-lg relative z-10">
-          <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-5 md:py-2.5 rounded-full border border-brand-accent/20 bg-brand-card text-brand-accent text-[10px] md:text-xs font-bold uppercase tracking-widest mb-4 md:mb-8 hero-elem shadow-lg relative z-10">
+          <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-brand-accent animate-pulse"></span>
           Attention B2B Market Leaders
         </div>
         
-        <h1 className="text-5xl md:text-7xl font-serif font-bold leading-[1.1] tracking-tight mb-8 hero-elem text-brand-light relative z-10">
+        <h1 className="text-[28px] leading-tight sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold md:leading-[1.1] tracking-tight mb-4 md:mb-8 hero-elem text-brand-light relative z-10">
           We'll Help You Generate <span className="text-brand-accent italic">10 to 20</span> Qualified Booked Calls A Month, Or You Don't Pay A Thing.
         </h1>
         
-        <p className="text-base md:text-lg text-brand-text max-w-4xl mb-12 hero-elem font-light leading-relaxed relative z-10">
+        <p className="hidden md:block text-base md:text-lg text-brand-text max-w-4xl mb-12 hero-elem font-light leading-relaxed relative z-10">
           We build and manage your complete B2B client acquisition system end-to-end: <strong className="font-semibold text-brand-light">high-converting Video Sales Letters, targeted Meta ad campaigns, and automated GoHighLevel CRM routing</strong> so you wake up to qualified appointments on your calendar.
         </p>
 
         {/* VIDEO PLAYER */}
-        <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-3xl border-2 border-[#D6DB2B]/30 bg-black shadow-[0_0_50px_rgba(214,219,43,0.1)] mb-12 hero-elem overflow-hidden">
+        <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl md:rounded-3xl border-2 border-[#D6DB2B]/30 bg-black shadow-[0_0_50px_rgba(214,219,43,0.1)] mb-6 md:mb-12 hero-elem overflow-hidden">
           <iframe 
             className="absolute inset-0 w-full h-full"
             src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=0&controls=1&rel=0" 

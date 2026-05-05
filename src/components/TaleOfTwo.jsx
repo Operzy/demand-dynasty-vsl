@@ -18,26 +18,28 @@ const TaleOfTwo = () => {
       // Animate the figures down their respective tracks
       if (leftTrackRef.current && leftFigureRef.current) {
         gsap.to(leftFigureRef.current, {
-          y: leftTrackRef.current.offsetHeight - leftFigureRef.current.offsetHeight,
+          y: () => leftTrackRef.current.offsetHeight - leftFigureRef.current.offsetHeight,
           ease: "none",
           scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top center",
-            end: "bottom center",
+            trigger: leftTrackRef.current,
+            start: "top 60%",
+            end: "bottom 60%",
             scrub: true,
+            invalidateOnRefresh: true
           }
         });
       }
 
       if (rightTrackRef.current && rightFigureRef.current) {
         gsap.to(rightFigureRef.current, {
-          y: rightTrackRef.current.offsetHeight - rightFigureRef.current.offsetHeight,
+          y: () => rightTrackRef.current.offsetHeight - rightFigureRef.current.offsetHeight,
           ease: "none",
           scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top center",
-            end: "bottom center",
+            trigger: rightTrackRef.current,
+            start: "top 60%",
+            end: "bottom 60%",
             scrub: true,
+            invalidateOnRefresh: true
           }
         });
       }
@@ -59,7 +61,7 @@ const TaleOfTwo = () => {
         
         {/* LEFT COLUMN: The Traditional Way */}
         <div className="bg-[#16181D] rounded-3xl p-8 border border-red-900/30 shadow-lg relative flex flex-col">
-          <div className="flex justify-between items-center bg-red-950/20 px-6 py-4 rounded-2xl border border-red-900/50 mb-10">
+          <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center gap-2 bg-red-950/20 px-6 py-4 rounded-2xl border border-red-900/50 mb-10">
             <h3 className="text-xl font-bold text-red-400">The Traditional Way</h3>
             <span className="text-xs font-bold uppercase tracking-widest text-red-500/70 bg-red-950/40 px-3 py-1 rounded-full">100% Your Risk</span>
           </div>
@@ -116,7 +118,7 @@ const TaleOfTwo = () => {
           
           <div className="absolute top-0 right-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-accent/50 to-transparent"></div>
 
-          <div className="flex justify-between items-center bg-brand-accent/5 px-6 py-4 rounded-2xl border border-brand-accent/20 mb-10 relative z-10">
+          <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center gap-2 bg-brand-accent/5 px-6 py-4 rounded-2xl border border-brand-accent/20 mb-10 relative z-10">
             <h3 className="text-xl font-bold text-brand-light">Our 14-21 Day Setup</h3>
             <span className="text-xs font-bold uppercase tracking-widest text-brand-dark bg-brand-accent px-3 py-1 rounded-full shadow-[0_0_15px_rgba(214,219,43,0.3)]">100% Our Risk</span>
           </div>
