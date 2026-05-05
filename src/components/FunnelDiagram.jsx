@@ -75,28 +75,31 @@ const FunnelDiagram = () => {
         </div>
 
         {/* Desktop Layout (Horizontal Flow) */}
-        <div className="hidden lg:flex items-center justify-center relative w-full pt-10 diagram-grid">
-          {/* Continuous connection line behind */}
-          <div className="absolute top-1/2 -translate-y-1/2 left-10 right-10 h-1 bg-brand-border/30 rounded-full z-0"></div>
+        <div className="hidden lg:flex items-start justify-center relative w-full pt-10 diagram-grid px-8">
           
-          <div className="flex justify-between w-full relative z-10">
+          <div className="flex w-full relative z-10">
             {nodes.map((node, i) => (
-              <div key={node.id} className="flex flex-col items-center group diagram-node w-40">
-                <div className={`w-16 h-16 rounded-2xl border ${node.border} ${node.bg} ${node.color} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300 relative bg-[#0b0c10]`}>
-                  {node.icon}
-                  {/* Glowing dot on top */}
-                  <div className={`absolute -top-1 w-2 h-2 rounded-full bg-current pulse-line`}></div>
+              <React.Fragment key={node.id}>
+                {/* Node */}
+                <div className="flex flex-col items-center group diagram-node w-36 relative shrink-0">
+                  <div className={`w-16 h-16 rounded-2xl border ${node.border} ${node.bg} ${node.color} flex items-center justify-center mb-5 shadow-[0_0_20px_rgba(0,0,0,0.5)] group-hover:scale-110 group-hover:border-opacity-100 transition-all duration-300 relative bg-[#0b0c10] z-20`}>
+                    {node.icon}
+                    {/* Glowing dot on top */}
+                    <div className={`absolute -top-1 w-2 h-2 rounded-full bg-current pulse-line`}></div>
+                  </div>
+                  <h3 className="text-brand-light font-bold text-center text-sm mb-1">{node.title}</h3>
+                  <p className="text-brand-text text-xs text-center px-2 leading-snug">{node.desc}</p>
                 </div>
-                <h3 className="text-brand-light font-bold text-center text-sm mb-1">{node.title}</h3>
-                <p className="text-brand-text text-xs text-center">{node.desc}</p>
                 
-                {/* Arrow to next node */}
+                {/* Connector line with arrow */}
                 {i < nodes.length - 1 && (
-                  <div className="absolute top-8 -right-4 -translate-y-1/2 text-brand-border/60">
-                    <ArrowRight size={20} />
+                  <div className="flex-1 flex items-start justify-center pt-8 relative z-0 diagram-node min-w-[20px]">
+                     <div className="w-full h-[2px] bg-gradient-to-r from-brand-border/10 via-brand-accent/30 to-brand-border/10 relative flex items-center justify-center">
+                        <ArrowRight size={18} className="text-brand-accent absolute bg-[#050608] px-1 shadow-[0_0_10px_#050608]" />
+                     </div>
                   </div>
                 )}
-              </div>
+              </React.Fragment>
             ))}
           </div>
         </div>
