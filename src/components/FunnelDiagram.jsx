@@ -95,7 +95,7 @@ const FunnelDiagram = () => {
                 {i < nodes.length - 1 && (
                   <div className="flex-1 flex items-start justify-center pt-8 relative z-0 diagram-node min-w-[20px]">
                      <div className="w-full h-[2px] bg-gradient-to-r from-brand-border/10 via-brand-accent/30 to-brand-border/10 relative flex items-center justify-center">
-                        <ArrowRight size={18} className="text-brand-accent absolute bg-[#050608] px-1 shadow-[0_0_10px_#050608]" />
+                        <ArrowRight size={24} className="text-brand-accent absolute bg-[#050608] px-1 shadow-[0_0_10px_#050608]" />
                      </div>
                   </div>
                 )}
