@@ -96,7 +96,7 @@ const VSLPage = ({ onOpenQualifier }) => {
         </div>
         
         <h1 className="text-[28px] leading-tight sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold md:leading-[1.1] tracking-tight mb-4 md:mb-8 hero-elem text-brand-light relative z-10">
-          We'll Help You Generate <span className="text-brand-accent italic">10 to 20</span> Qualified Booked Calls A Month, Or You Don't Pay A Thing.
+          We'll Install Our DFY Client Acquisition System and Fill Your Calendar With <span className="text-brand-accent italic">15-20</span> Qualified Sales Calls Every Month or You Don't Pay.
         </h1>
         
         <p className="hidden md:block text-base md:text-lg text-brand-text max-w-4xl mb-12 hero-elem font-light leading-relaxed relative z-10">
