@@ -53,8 +53,8 @@ const ProcessMap = () => {
     {
       phase: "Phase 2",
       icon: <Video size={24} />,
-      title: "The Conversion Mechanism",
-      description: "We script, design, and build a high-fidelity Video Sales Letter (VSL). This asset acts as your best salesperson, automatically filtering and pre-selling your prospects."
+      title: "VSL & Landing Page",
+      description: "We engineer a high-converting Video Sales Letter and landing page designed specifically to filter out the unqualified and compel your ideal targets to book a strategy session."
     },
     {
       phase: "Phase 3",
