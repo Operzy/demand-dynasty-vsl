@@ -182,7 +182,7 @@ const VSLPage = ({ onOpenQualifier }) => {
       </section>
 
       {/* FOOTER */}
-      <footer className="w-full py-6 text-center text-brand-text text-sm flex flex-col items-center justify-center gap-2 reveal-section relative z-10 bg-[#050608]">
+      <footer className="w-full py-6 text-center text-brand-text text-sm flex flex-col items-center justify-center gap-2 relative z-10 bg-[#050608] border-t border-white/5">
         <div>&copy; {new Date().getFullYear()} Demand Dynasty. All rights reserved.</div>
         <div className="flex gap-4">
           <a href="#" className="hover:text-brand-light transition-colors">Privacy Policy</a>
