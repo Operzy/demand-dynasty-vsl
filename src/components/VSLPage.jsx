@@ -100,7 +100,7 @@ const VSLPage = ({ onOpenQualifier }) => {
         </h1>
         
         <p className="hidden md:block text-base md:text-lg text-brand-text max-w-4xl mb-12 hero-elem font-light leading-relaxed relative z-10">
-          We build and manage your complete B2B client acquisition system end-to-end: <strong className="font-semibold text-brand-light">high-converting Video Sales Letters, targeted Meta ad campaigns, and automated GoHighLevel CRM routing</strong> so you wake up to qualified appointments on your calendar.
+          In Just 14 Days, We Build the <strong className="font-semibold text-brand-light">Landing Page</strong>, Write the <strong className="font-semibold text-brand-light">VSL</strong>, Run the <strong className="font-semibold text-brand-light">Meta Ads</strong>, and Automate Your <strong className="font-semibold text-brand-light">CRM</strong> So You Can Stop Worrying About Where Your Next Client Comes From.
         </p>
 
         {/* VIDEO PLAYER */}
