@@ -70,7 +70,7 @@ const FunnelDiagram = () => {
           </span>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-light mb-6">The Lead Generation Engine</h2>
           <p className="text-xl text-brand-text max-w-2xl mx-auto font-light">
-            A visual breakdown of how we turn cold B2B traffic into highly qualified appointments on your calendar.
+            A visual breakdown of how we consistently turn cold B2B traffic into highly qualified appointments on your calendar.
           </p>
         </div>
 
