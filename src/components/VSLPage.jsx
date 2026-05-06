@@ -126,9 +126,6 @@ const VSLPage = ({ onOpenQualifier }) => {
       {/* THE PROBLEM (Bottleneck) */}
       <Bottleneck />
 
-      {/* DELIVERABLES */}
-      <Deliverables />
-
       {/* THE SOLUTION (Literal Paid Ads System) */}
       <PaidAdsSystem />
 
@@ -137,6 +134,9 @@ const VSLPage = ({ onOpenQualifier }) => {
 
       {/* SYSTEM DIAGRAM */}
       <FunnelDiagram />
+
+      {/* DELIVERABLES */}
+      <Deliverables />
 
       {/* TALE OF TWO BUSINESSES */}
       <TaleOfTwo />
