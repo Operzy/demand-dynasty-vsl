@@ -166,7 +166,7 @@ const VSLPage = ({ onOpenQualifier }) => {
       {/* BOTTOM CTA */}
       <section className="w-full bg-[#0a0c0f] border-t border-brand-accent/20 reveal-section relative overflow-hidden">
         
-        <div className="max-w-4xl mx-auto px-6 py-32 text-center relative z-10 flex flex-col items-center">
+        <div className="max-w-4xl mx-auto px-6 pt-32 pb-12 text-center relative z-10 flex flex-col items-center">
           <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 text-brand-light">Ready to Scale Your Business?</h2>
           <p className="text-xl text-brand-text mb-10 max-w-2xl font-light">
             Secure your spot now. We only partner with a select group of business owners each month to guarantee performance.
@@ -178,7 +178,7 @@ const VSLPage = ({ onOpenQualifier }) => {
       </section>
 
       {/* FOOTER */}
-      <footer className="w-full py-8 text-center text-brand-text text-sm flex flex-col items-center justify-center gap-4 reveal-section relative z-10 bg-[#050608]">
+      <footer className="w-full py-6 text-center text-brand-text text-sm flex flex-col items-center justify-center gap-2 reveal-section relative z-10 bg-[#050608]">
         <div>&copy; {new Date().getFullYear()} Demand Dynasty. All rights reserved.</div>
         <div className="flex gap-4">
           <a href="#" className="hover:text-brand-light transition-colors">Privacy Policy</a>
