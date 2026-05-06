@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import VSLPage from './components/VSLPage';
 import Booking from './components/Booking';
+import ThankYou from './components/ThankYou';
 import QualifierModal from './components/QualifierModal';
 
 function App() {
-  const [currentView, setCurrentView] = useState('vsl');
+  // Simple router based on pathname
+  const initialView = window.location.pathname.includes('thank-you') ? 'thankyou' : 'vsl';
+  const [currentView, setCurrentView] = useState(initialView);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => setIsModalOpen(true);
@@ -20,8 +23,10 @@ function App() {
     <div className="min-h-screen bg-brand-dark text-brand-light relative">
       {currentView === 'vsl' ? (
         <VSLPage onOpenQualifier={handleOpenModal} />
-      ) : (
+      ) : currentView === 'booking' ? (
         <Booking />
+      ) : (
+        <ThankYou />
       )}
       
       {isModalOpen && (
