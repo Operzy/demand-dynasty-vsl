@@ -128,11 +128,11 @@ const VSLPage = ({ onOpenQualifier }) => {
       {/* THE SOLUTION (Literal Paid Ads System) */}
       <PaidAdsSystem />
 
-      {/* SYSTEM DIAGRAM */}
-      <FunnelDiagram />
-
       {/* THE DEPLOYMENT PROCESS */}
       <ProcessMap />
+
+      {/* SYSTEM DIAGRAM */}
+      <FunnelDiagram />
 
       {/* TALE OF TWO BUSINESSES */}
       <TaleOfTwo />
