@@ -62,7 +62,7 @@ const TaleOfTwo = () => {
         {/* LEFT COLUMN: The Traditional Way */}
         <div className="bg-[#16181D] rounded-3xl p-8 border border-red-900/30 shadow-lg relative flex flex-col">
           <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center gap-2 bg-red-950/20 px-6 py-4 rounded-2xl border border-red-900/50 mb-10">
-            <h3 className="text-xl font-bold text-red-400">The Traditional Way</h3>
+            <h3 className="text-xl font-bold text-red-400">Traditional Agencies</h3>
             <span className="text-xs font-bold uppercase tracking-widest text-red-500/70 bg-red-950/40 px-3 py-1 rounded-full">100% Your Risk</span>
           </div>
 
@@ -119,7 +119,7 @@ const TaleOfTwo = () => {
           <div className="absolute top-0 right-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-accent/50 to-transparent"></div>
 
           <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center gap-2 bg-brand-accent/5 px-6 py-4 rounded-2xl border border-brand-accent/20 mb-10 relative z-10">
-            <h3 className="text-xl font-bold text-brand-light">Our 14-21 Day Setup</h3>
+            <h3 className="text-xl font-bold text-brand-light">Our Approach</h3>
             <span className="text-xs font-bold uppercase tracking-widest text-brand-dark bg-brand-accent px-3 py-1 rounded-full shadow-[0_0_15px_rgba(214,219,43,0.3)]">100% Our Risk</span>
           </div>
 
