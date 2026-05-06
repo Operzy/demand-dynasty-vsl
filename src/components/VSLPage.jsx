@@ -101,7 +101,7 @@ const VSLPage = ({ onOpenQualifier }) => {
         </h1>
         
         <p className="hidden md:block text-base md:text-lg text-brand-text max-w-4xl mb-12 hero-elem font-light leading-relaxed relative z-10">
-          In Just 14 Days, We Build the <strong className="font-semibold text-brand-light">Landing Page</strong>, Write the <strong className="font-semibold text-brand-light">VSL</strong>, Run the <strong className="font-semibold text-brand-light">Meta Ads</strong>, and Automate Your <strong className="font-semibold text-brand-light">CRM</strong> So You Can Stop Worrying About Where Your Next Client Comes From.
+          In Just 14 Days, We'll Build Your Done-For-You Funnel, Write the VSL, Run the Meta Ads, and Automate Your CRM So You Can Stop Worrying About Where Your Next Client Comes From.
         </p>
 
         {/* VIDEO PLAYER */}
