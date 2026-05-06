@@ -44,14 +44,14 @@ const ThankYou = () => {
 
         {/* VIDEO PLACEHOLDER */}
         <div className="w-full max-w-3xl aspect-video bg-[#0b0c10] border border-white/10 rounded-2xl md:rounded-3xl shadow-2xl mb-16 overflow-hidden relative group">
-          <div className="absolute inset-0 flex flex-col items-center justify-center z-10 bg-black/60">
-            <div className="w-20 h-20 rounded-full bg-brand-accent flex items-center justify-center text-black cursor-pointer group-hover:scale-110 transition-transform shadow-[0_0_30px_rgba(214,219,43,0.3)]">
-              <svg className="w-10 h-10 ml-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <p className="mt-6 text-white/60 font-mono text-sm tracking-widest uppercase">Watch This Before Proceeding</p>
-          </div>
-          {/* Fallback image behind the play button */}
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2074&auto=format&fit=crop')] bg-cover bg-center opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700"></div>
+          <iframe 
+            src="https://www.youtube.com/embed/5SZYz7lZRRI?rel=0&modestbranding=1" 
+            title="Thank You Strategy Session"
+            className="absolute top-0 left-0 w-full h-full"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
 
         {/* TWO STEPS GRID */}
