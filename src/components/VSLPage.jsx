@@ -8,6 +8,7 @@ import PaidAdsSystem from './PaidAdsSystem';
 import FunnelDiagram from './FunnelDiagram';
 import ProcessMap from './ProcessMap';
 import Bottleneck from './Bottleneck';
+import Deliverables from './Deliverables';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -124,6 +125,9 @@ const VSLPage = ({ onOpenQualifier }) => {
 
       {/* THE PROBLEM (Bottleneck) */}
       <Bottleneck />
+
+      {/* DELIVERABLES */}
+      <Deliverables />
 
       {/* THE SOLUTION (Literal Paid Ads System) */}
       <PaidAdsSystem />
