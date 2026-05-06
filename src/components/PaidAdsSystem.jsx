@@ -12,9 +12,9 @@ const PaidAdsSystem = () => {
 
         <div className="text-center mb-24">
           <span className="text-brand-accent text-sm font-bold uppercase tracking-widest block mb-4 border border-brand-accent/30 w-max mx-auto px-4 py-1 rounded-full bg-brand-accent/5">
-            The Solution
+            Here's How We Fix It
           </span>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-light mb-6">How We Generate Your Deal Flow</h2>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-light mb-6">A Proven System That Books Qualified Calls on Demand</h2>
           <p className="text-xl text-brand-text max-w-2xl mx-auto font-light">
             We don't use abstract pipelines or generic funnels. We run highly targeted paid ads and drive them into a proven conversion mechanism to book calls directly on your calendar.
           </p>
@@ -28,9 +28,9 @@ const PaidAdsSystem = () => {
               <div className="w-14 h-14 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent border border-brand-accent/20 shadow-[0_0_15px_rgba(214,219,43,0.1)]">
                 <MousePointerClick size={24} />
               </div>
-              <h3 className="text-3xl md:text-4xl font-serif font-bold text-brand-light">1. We Run Your Paid Ads</h3>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold text-brand-light">1. Targeted B2B Meta Acquisition</h3>
               <p className="text-lg text-brand-text font-light leading-relaxed">
-                Referrals are unpredictable. We take complete control of your traffic by launching and managing high-budget Meta Ad campaigns. We put your B2B offer directly in front of decision-makers.
+                We deploy capital into highly-targeted Meta campaigns designed exclusively for B2B client acquisition. We bypass gatekeepers, utilize dynamic creative testing, and force the algorithm to find exact-match buyers for your high-ticket offer.
               </p>
               <div className="flex flex-wrap gap-3 mt-4">
                 <span className="text-xs font-mono text-brand-accent bg-brand-accent/10 px-3 py-1 rounded-full border border-brand-accent/20">B2B META ADS</span>
@@ -76,9 +76,9 @@ const PaidAdsSystem = () => {
               <div className="w-14 h-14 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent border border-brand-accent/20 shadow-[0_0_15px_rgba(214,219,43,0.1)]">
                 <Video size={24} />
               </div>
-              <h3 className="text-3xl md:text-4xl font-serif font-bold text-brand-light">2. The Conversion VSL</h3>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold text-brand-light">2. The Asymmetric Sales Asset</h3>
               <p className="text-lg text-brand-text font-light leading-relaxed">
-                We don't send expensive ad traffic to a generic website. We route all clicks into a high-fidelity Video Sales Letter (VSL). This video pre-sells your most expensive offers and acts as your best salesperson 24/7.
+                We replace unpredictable organic marketing with a psychological, high-fidelity Video Sales Letter. This 5-to-10 minute asset systematically dismantles objections, builds institutional authority, and pre-indoctrinates your prospects before you ever speak a word to them.
               </p>
             </div>
             <div className="md:w-1/2 w-full">
@@ -110,9 +110,9 @@ const PaidAdsSystem = () => {
               <div className="w-14 h-14 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent border border-brand-accent/20 shadow-[0_0_15px_rgba(214,219,43,0.1)]">
                 <CalendarCheck size={24} />
               </div>
-              <h3 className="text-3xl md:text-4xl font-serif font-bold text-brand-light">3. Qualified Appointments</h3>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold text-brand-light">3. Automated Deal Flow Routing</h3>
               <p className="text-lg text-brand-text font-light leading-relaxed">
-                Unqualified leads are dropped. We use GoHighLevel automation to filter, route, and book only the highly-qualified prospects directly onto your calendar. You wake up to sales calls.
+                Tire-kickers are locked out. We architect a custom backend infrastructure that filters traffic, captures data, and automatically nurtures leads via SMS and Email. By the time a prospect hits your calendar, they are fully qualified, highly motivated, and ready to buy.
               </p>
             </div>
             <div className="md:w-1/2 w-full">
