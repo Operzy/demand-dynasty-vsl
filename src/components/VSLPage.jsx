@@ -106,14 +106,11 @@ const VSLPage = ({ onOpenQualifier }) => {
 
         {/* VIDEO PLAYER */}
         <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl md:rounded-3xl border-2 border-[#D6DB2B]/30 bg-black shadow-[0_0_50px_rgba(214,219,43,0.1)] mb-6 md:mb-12 hero-elem overflow-hidden">
-          <iframe 
-            className="absolute inset-0 w-full h-full"
-            src="https://www.youtube.com/embed/5SZYz7lZRRI?autoplay=0&controls=1&rel=0" 
-            title="Video Sales Letter"
-            frameBorder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowFullScreen>
-          </iframe>
+          <wistia-player
+            media-id="xiflezxu0f"
+            aspect="1.7777777777777777"
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
+          ></wistia-player>
         </div>
 
         <div className="flex flex-col items-center gap-4 hero-elem">
