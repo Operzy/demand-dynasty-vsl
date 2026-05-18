@@ -82,30 +82,30 @@ const VSLPage = ({ onOpenQualifier }) => {
     <div ref={containerRef} className="w-full flex flex-col items-center relative z-10">
       
       {/* HEADER / NAVIGATION (Minimal) */}
-      <header className="w-full max-w-6xl mx-auto px-6 py-2 md:py-4 flex justify-center items-center hero-elem">
+      <header className="w-full max-w-6xl mx-auto px-6 py-1 md:py-2 flex justify-center items-center hero-elem">
         <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="Demand Dynasty" className="h-8 md:h-16 w-auto object-contain" />
+          <img src="/logo.png" alt="Demand Dynasty" className="h-8 md:h-10 w-auto object-contain" />
         </div>
       </header>
 
       {/* HERO SECTION */}
-      <section className="w-full max-w-5xl mx-auto px-6 pt-2 pb-8 md:pt-4 md:pb-16 flex flex-col items-center text-center relative overflow-hidden">
-        
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-5 md:py-2.5 rounded-full border border-brand-accent/20 bg-brand-card text-brand-accent text-[10px] md:text-xs font-bold uppercase tracking-widest mb-4 md:mb-8 hero-elem shadow-lg relative z-10">
+      <section className="w-full max-w-5xl mx-auto px-6 pt-0 pb-6 md:pt-0 md:pb-10 flex flex-col items-center text-center relative overflow-hidden">
+
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-5 md:py-2 rounded-full border border-brand-accent/20 bg-brand-card text-brand-accent text-[10px] md:text-xs font-bold uppercase tracking-widest mb-3 md:mb-4 hero-elem shadow-lg relative z-10">
           <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-brand-accent animate-pulse"></span>
           Attention B2B Market Leaders
         </div>
-        
-        <h1 className="text-[28px] leading-tight sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold md:leading-[1.1] tracking-tight mb-4 md:mb-8 hero-elem text-brand-light relative z-10">
+
+        <h1 className="text-[28px] leading-tight sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold md:leading-[1.1] tracking-tight mb-3 md:mb-4 hero-elem text-brand-light relative z-10">
           We'll Build a Custom Quiz Funnel That Will Fill Your Calendar With <span className="text-brand-accent italic">50</span> Qualified Leads in <span className="text-brand-accent italic">60 Days</span> Guaranteed, or You Don't Pay.
         </h1>
-        
-        <p className="hidden md:block text-base md:text-lg text-brand-text max-w-4xl mb-12 hero-elem font-light leading-relaxed relative z-10">
+
+        <p className="hidden md:block text-base md:text-lg text-brand-text max-w-4xl mb-6 hero-elem font-light leading-relaxed relative z-10">
           In Just 14 Days, We'll Build Your Done-For-You Funnel, Write the VSL, Run the Meta Ads, and Automate Your CRM So You Can Stop Worrying About Where Your Next Client Comes From.
         </p>
 
         {/* VIDEO PLAYER */}
-        <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl md:rounded-3xl border-2 border-[#D6DB2B]/30 bg-black shadow-[0_0_50px_rgba(214,219,43,0.1)] mb-6 md:mb-12 hero-elem overflow-hidden">
+        <div className="relative w-full max-w-2xl mx-auto aspect-video rounded-2xl md:rounded-3xl border-2 border-[#D6DB2B]/30 bg-black shadow-[0_0_50px_rgba(214,219,43,0.1)] mb-4 md:mb-6 hero-elem overflow-hidden">
           <wistia-player
             media-id="xiflezxu0f"
             aspect="1.7777777777777777"
