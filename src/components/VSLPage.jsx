@@ -96,7 +96,7 @@ const VSLPage = ({ onOpenQualifier }) => {
           Attention B2B Market Leaders
         </div>
 
-        <h1 className="text-[28px] leading-tight sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold md:leading-[1.1] tracking-tight mb-3 md:mb-4 hero-elem text-brand-light relative z-10">
+        <h1 className="text-[24px] leading-tight sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold md:leading-[1.15] tracking-tight mb-3 md:mb-4 hero-elem text-brand-light relative z-10">
           We'll Build a Custom Quiz Funnel That Will Fill Your Calendar With <span className="text-brand-accent italic">50</span> Qualified Leads in <span className="text-brand-accent italic">60 Days</span> Guaranteed, or You Don't Pay.
         </h1>
 
@@ -105,7 +105,7 @@ const VSLPage = ({ onOpenQualifier }) => {
         </p>
 
         {/* VIDEO PLAYER */}
-        <div className="relative w-full max-w-2xl mx-auto aspect-video rounded-2xl md:rounded-3xl border-2 border-[#D6DB2B]/30 bg-black shadow-[0_0_50px_rgba(214,219,43,0.1)] mb-4 md:mb-6 hero-elem overflow-hidden">
+        <div className="relative w-full max-w-3xl mx-auto aspect-video rounded-2xl md:rounded-3xl border-2 border-[#D6DB2B]/30 bg-black shadow-[0_0_50px_rgba(214,219,43,0.1)] mb-4 md:mb-6 hero-elem overflow-hidden">
           <wistia-player
             media-id="xiflezxu0f"
             aspect="1.7777777777777777"
