@@ -10,6 +10,8 @@ export default async function handler(req, res) {
 
   const token = process.env.GHL_API_TOKEN;
   const locationId = process.env.GHL_LOCATION_ID;
+  const pipelineId = process.env.GHL_PIPELINE_ID;
+  const stageId = process.env.GHL_STAGE_ID;
 
   if (!token || !locationId) {
     console.error('Missing GHL_API_TOKEN or GHL_LOCATION_ID env var');
@@ -62,6 +64,29 @@ export default async function handler(req, res) {
     }
 
     const contactId = data?.contact?.id || data?.id;
+
+    // Add them to the Demand Dynasty pipeline at the "New Lead" stage.
+    if (contactId && pipelineId && stageId) {
+      try {
+        const oppRes = await fetch(`${GHL}/opportunities/`, {
+          method: 'POST',
+          headers,
+          body: JSON.stringify({
+            pipelineId,
+            locationId,
+            pipelineStageId: stageId,
+            name: full_name || email || 'VSL Application',
+            status: 'open',
+            contactId,
+          }),
+        });
+        if (!oppRes.ok) {
+          console.error('GHL opportunity creation failed', oppRes.status, await oppRes.text());
+        }
+      } catch (oppErr) {
+        console.error('Opportunity creation failed (non-fatal)', oppErr);
+      }
+    }
 
     // Best-effort: store the qualifier answers as a note on the contact.
     if (contactId) {
