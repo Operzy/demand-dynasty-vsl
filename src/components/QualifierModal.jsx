@@ -3,8 +3,13 @@ import gsap from 'gsap';
 import { X, ArrowRight } from 'lucide-react';
 import Button from './ui/Button';
 
+// Posts to our own serverless function (api/submit.js), which securely
+// creates the lead in GoHighLevel and tags them "application submitted".
+const SUBMIT_ENDPOINT = '/api/submit';
+
 const QualifierModal = ({ onClose, onComplete }) => {
   const [step, setStep] = useState(1);
+  const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     revenue: '',
     runningAds: '',
@@ -53,9 +58,40 @@ const QualifierModal = ({ onClose, onComplete }) => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onComplete();
+    setSubmitting(true);
+
+    // Split full name into first/last for GHL contact fields
+    const trimmedName = formData.name.trim();
+    const firstSpace = trimmedName.indexOf(' ');
+    const firstName = firstSpace === -1 ? trimmedName : trimmedName.slice(0, firstSpace);
+    const lastName = firstSpace === -1 ? '' : trimmedName.slice(firstSpace + 1);
+
+    try {
+      await fetch(SUBMIT_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          first_name: firstName,
+          last_name: lastName,
+          full_name: trimmedName,
+          email: formData.email,
+          phone: formData.phone,
+          monthly_revenue: formData.revenue,
+          running_meta_ads: formData.runningAds,
+          ready_to_invest: formData.readyToInvest,
+          tags: ['application submitted'],
+          source: 'VSL Qualifier Form',
+        }),
+      });
+    } catch (err) {
+      // Don't block the booking flow if the webhook fails
+      console.error('GHL webhook submission failed:', err);
+    } finally {
+      setSubmitting(false);
+      onComplete();
+    }
   };
 
   return (
@@ -174,8 +210,8 @@ const QualifierModal = ({ onClose, onComplete }) => {
                   onChange={e => setFormData({...formData, phone: e.target.value})}
                   className="w-full bg-[#0a0c0f] border border-brand-border rounded-xl px-4 py-3 text-brand-light placeholder-brand-text/50 focus:outline-none focus:border-brand-accent transition-colors"
                 />
-                <Button type="submit" className="w-full mt-2">
-                  Submit & Book Call
+                <Button type="submit" disabled={submitting} className="w-full mt-2">
+                  {submitting ? 'Submitting…' : 'Submit & Book Call'}
                 </Button>
               </form>
             </div>

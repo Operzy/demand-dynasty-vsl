@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 
-const Button = ({ children, onClick, className = '', variant = 'primary', type = 'button' }) => {
+const Button = ({ children, onClick, className = '', variant = 'primary', type = 'button', disabled = false }) => {
   const buttonRef = useRef(null);
   const bgRef = useRef(null);
 
@@ -39,7 +39,8 @@ const Button = ({ children, onClick, className = '', variant = 'primary', type =
       ref={buttonRef}
       type={type}
       onClick={onClick}
-      className={`${baseClasses} ${variants[variant]} ${className}`}
+      disabled={disabled}
+      className={`${baseClasses} ${variants[variant]} ${className} ${disabled ? 'opacity-60 cursor-not-allowed' : ''}`}
     >
       {variant === 'primary' && (
         <span
