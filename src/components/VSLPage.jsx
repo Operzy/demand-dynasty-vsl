@@ -97,7 +97,7 @@ const VSLPage = ({ onOpenQualifier }) => {
         </div>
 
         <h1 className="text-[24px] leading-tight sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold md:leading-[1.15] tracking-tight mb-4 md:mb-5 hero-elem text-brand-light relative z-10">
-          We'll Build a Custom Quiz Funnel That Will Fill Your Calendar With <span className="text-brand-accent italic">50</span> Qualified Leads in <span className="text-brand-accent italic">60 Days</span> Guaranteed, or You Don't Pay.
+          We'll Build an AI-Powered Quiz Funnel That Will Fill Your Calendar With <span className="text-brand-accent italic">50</span> Qualified Leads in <span className="text-brand-accent italic">60 Days</span> Guaranteed, or You Don't Pay.
         </h1>
 
         <p className="hidden md:block text-base md:text-lg text-brand-text max-w-4xl mb-8 hero-elem font-light leading-relaxed relative z-10">
