@@ -1,62 +1,24 @@
-import React, { useRef, useEffect } from 'react';
-import gsap from 'gsap';
+import React from 'react';
 
-const Button = ({ children, onClick, className = '', variant = 'primary', type = 'button', disabled = false }) => {
-  const buttonRef = useRef(null);
-  const bgRef = useRef(null);
-
-  useEffect(() => {
-    const btn = buttonRef.current;
-    if (!btn) return;
-
-    const ctx = gsap.context(() => {
-      btn.addEventListener('mouseenter', () => {
-        gsap.to(btn, { scale: 1.03, duration: 0.3, ease: 'power2.out' });
-        if (bgRef.current) {
-          gsap.to(bgRef.current, { top: 0, duration: 0.3, ease: 'power2.out' });
-        }
-      });
-      btn.addEventListener('mouseleave', () => {
-        gsap.to(btn, { scale: 1, duration: 0.3, ease: 'power2.out' });
-        if (bgRef.current) {
-          gsap.to(bgRef.current, { top: '100%', duration: 0.3, ease: 'power2.out' });
-        }
-      });
-    }, btn);
-
-    return () => ctx.revert();
-  }, []);
-
-  const baseClasses = "relative overflow-hidden font-semibold flex items-center justify-center transition-shadow group";
+const Button = ({ children, onClick, className = '', variant = 'primary', type = 'button', disabled = false, arrow = true }) => {
+  const baseClasses = "font-medium text-[15px] tracking-[-0.01em] inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 border transition-colors duration-300 group";
   const variants = {
-    primary: "bg-brand-accent text-brand-dark px-8 py-4 rounded-[2rem] shadow-[0_0_20px_rgba(214,219,43,0.3)]",
-    secondary: "bg-brand-card text-brand-light px-8 py-4 rounded-[2rem] border border-brand-border",
-    outline: "bg-transparent text-brand-light px-8 py-4 rounded-[2rem] border border-brand-border hover:border-brand-accent transition-colors"
+    // White pill, for dark surfaces
+    primary: "bg-white text-brand-ink border-transparent hover:bg-brand-cream",
+    // Ink pill, for light surfaces
+    dark: "bg-brand-ink text-white border-transparent hover:bg-brand-ink-soft",
+    outline: "bg-transparent text-white border-brand-cream/30 hover:border-brand-cream/70"
   };
 
   return (
     <button
-      ref={buttonRef}
       type={type}
       onClick={onClick}
       disabled={disabled}
       className={`${baseClasses} ${variants[variant]} ${className} ${disabled ? 'opacity-60 cursor-not-allowed' : ''}`}
     >
-      {variant === 'primary' && (
-        <span
-          ref={bgRef}
-          className="absolute left-0 top-full w-full h-full bg-brand-light z-0"
-        ></span>
-      )}
-      {variant === 'secondary' && (
-        <span
-          ref={bgRef}
-          className="absolute left-0 top-full w-full h-full bg-brand-border z-0"
-        ></span>
-      )}
-      <span className="relative z-10 w-full flex justify-center items-center gap-2">
-        {children}
-      </span>
+      {children}
+      {arrow && <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-0.5">→</span>}
     </button>
   );
 };

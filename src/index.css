@@ -4,23 +4,104 @@
 
 @layer base {
   body {
-    @apply bg-brand-dark text-brand-light font-sans antialiased overflow-x-hidden;
+    @apply bg-white text-brand-ink font-sans antialiased overflow-x-hidden;
   }
 }
 
+@layer components {
+  /* Mono eyebrow label */
+  .kicker {
+    @apply font-mono text-[10.5px] font-medium uppercase tracking-[0.2em] text-brand-faint;
+  }
 
+  /* Inter Tight headings */
+  .display {
+    @apply font-display font-medium tracking-[-0.03em] leading-[1.08];
+  }
+
+  /* Instrument Serif italic emphasis inside headings */
+  .display em,
+  .serif-em {
+    @apply font-serif italic font-normal tracking-[-0.01em];
+  }
+
+  /* Dark surfaces with the lime glow */
+  .section-dark {
+    background-color: #0c0d10;
+    background-image: radial-gradient(40% 55% at 0 0, rgba(120, 124, 34, 0.26), transparent 70%);
+  }
+
+  .hero-dark {
+    background-color: #0c0d10;
+    background-image:
+      radial-gradient(48% 60% at 92% 108%, rgba(214, 219, 43, 0.34), rgba(214, 219, 43, 0.1) 45%, transparent 72%),
+      radial-gradient(34% 48% at 0 -6%, rgba(120, 124, 34, 0.3), transparent 70%);
+  }
+
+  /* White hero: lime glows + faint grid, faded out at top and bottom so it blends into white neighbours */
+  .hero-light {
+    background-color: #fff;
+  }
+
+  .hero-light::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(16, 17, 18, 0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16, 17, 18, 0.055) 1px, transparent 1px),
+      radial-gradient(44% 52% at 100% 58%, rgba(214, 219, 43, 0.38), transparent 70%),
+      radial-gradient(40% 48% at 0 40%, rgba(214, 219, 43, 0.26), transparent 70%);
+    background-size: 56px 56px, 56px 56px, 100% 100%, 100% 100%;
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 16%, #000 80%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, #000 16%, #000 80%, transparent);
+  }
+
+  .media-dark {
+    background-color: #0c0d10;
+    background-image: radial-gradient(70% 80% at 80% 100%, rgba(214, 219, 43, 0.2), transparent 65%);
+  }
+}
+
+/* Slow client-logo marquee (same treatment as the website: black, 45% opacity) */
+.logo-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+.logo-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  width: max-content;
+  padding-right: 64px;
+  animation: logo-scroll 64s linear infinite;
+}
+.logo-marquee-track img {
+  filter: brightness(0);
+  opacity: 0.45;
+}
+@keyframes logo-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee-track { animation: none; }
+}
 
 /* Custom scrollbar for webkit */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0F1115;
+  background: #f7f7f5;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2B2F36;
+  background: rgba(16, 17, 18, 0.22);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #A7ADB5;
+  background: #6e7175;
 }

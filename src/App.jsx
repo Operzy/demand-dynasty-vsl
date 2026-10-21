@@ -20,7 +20,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-brand-dark text-brand-light relative">
+    <div className="min-h-screen bg-white text-brand-ink relative">
       {currentView === 'vsl' ? (
         <VSLPage onOpenQualifier={handleOpenModal} />
       ) : currentView === 'booking' ? (
@@ -28,11 +28,11 @@ function App() {
       ) : (
         <ThankYou />
       )}
-      
+
       {isModalOpen && (
-        <QualifierModal 
-          onClose={handleCloseModal} 
-          onComplete={handleCompleteQualifier} 
+        <QualifierModal
+          onClose={handleCloseModal}
+          onComplete={handleCompleteQualifier}
         />
       )}
     </div>
