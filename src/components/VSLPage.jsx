@@ -67,14 +67,14 @@ const VSLPage = ({ onOpenQualifier }) => {
 
       {/* HERO SECTION */}
       <section className="w-full hero-light relative overflow-hidden">
-        <div className="w-full max-w-5xl mx-auto px-6 pt-10 pb-14 md:pt-14 md:pb-20 flex flex-col items-center text-center relative z-10">
+        <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 pt-8 pb-12 sm:pt-10 sm:pb-14 md:pt-14 md:pb-20 flex flex-col items-center text-center relative z-10">
 
-          <p className="kicker !text-brand-ink md:!text-[12px] mb-5 md:mb-7 hero-elem inline-flex items-center gap-2.5 rounded-full bg-white border border-brand-line-strong px-4 py-2 shadow-[0_6px_20px_-10px_rgba(16,17,18,0.3)]">
+          <p className="kicker !text-brand-ink !tracking-[0.16em] md:!tracking-[0.2em] md:!text-[12px] whitespace-nowrap mb-5 md:mb-7 hero-elem inline-flex items-center gap-2.5 rounded-full bg-white border border-brand-line-strong px-4 py-2 shadow-[0_6px_20px_-10px_rgba(16,17,18,0.3)]">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-lime"></span>
             Attention B2B Market Leaders
           </p>
 
-          <h1 className="display text-[26px] sm:text-4xl md:text-5xl lg:text-[56px] mb-5 md:mb-6 hero-elem">
+          <h1 className="display text-[28px] sm:text-4xl md:text-5xl lg:text-[56px] mb-5 md:mb-6 hero-elem [text-wrap:balance]">
             We'll Build an AI-Powered Quiz Funnel That Will Fill Your Calendar With <em className="text-brand-olive">50</em> Qualified Leads in <em className="text-brand-olive">60 Days</em> Guaranteed, or You Don't Pay.
           </h1>
 
@@ -91,8 +91,8 @@ const VSLPage = ({ onOpenQualifier }) => {
             ></wistia-player>
           </div>
 
-          <div className="flex flex-col items-center gap-4 hero-elem">
-            <Button variant="dark" onClick={onOpenQualifier} className="w-auto whitespace-nowrap">
+          <div className="w-full sm:w-auto flex flex-col items-center gap-4 hero-elem">
+            <Button variant="dark" onClick={onOpenQualifier} className="w-full sm:w-auto whitespace-nowrap">
               Book Your Strategy Session
             </Button>
           </div>
@@ -101,7 +101,7 @@ const VSLPage = ({ onOpenQualifier }) => {
 
       {/* FOOTER */}
       <footer className="w-full bg-brand-dark text-white/55 text-sm relative z-10">
-        <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center">
           <img src="/logo-light-opt.webp" alt="Demand Dynasty" className="h-10 w-auto object-contain" />
           <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-white/35">&copy; {new Date().getFullYear()} Demand Dynasty. All rights reserved.</div>
         </div>

@@ -8,20 +8,20 @@ import { Play } from 'lucide-react';
 //
 // To set a video, paste its Wistia media ID (the code at the end of the
 // Wistia share link) into mediaId. An empty ID shows a placeholder box.
-// Every slot currently uses the main VSL (xiflezxu0f) as a stand-in.
-const CONFIRM_VIDEO = { mediaId: 'xiflezxu0f' };
+// Top confirmation video.
+const CONFIRM_VIDEO = { mediaId: 'gfmwvyakok' };
 
-// Placeholder titles and descriptions; replace with the real questions.
-// The section heading counts this list, so adding or removing one updates it.
+// The eight pre-call questions. Each card shows the video, then the
+// question, then the answer. mediaId is the Wistia media ID.
 const QUESTION_VIDEOS = [
-  { title: "What's the process and how long does it take?", description: 'Offer, build, launch, scale: what happens in each stage and how long each one takes.', mediaId: 'xiflezxu0f' },
-  { title: 'How fast will I start seeing leads?', description: 'The typical timeline from live ads to the first booked calls, and what speeds it up.', mediaId: 'xiflezxu0f' },
-  { title: 'Will the leads be qualified?', description: 'How the funnel filters for people who fit the offer and can afford it, before they reach your calendar.', mediaId: 'xiflezxu0f' },
-  { title: 'What are my responsibilities and time commitment?', description: 'The input we need from you each week, and everything our team handles so you do not have to.', mediaId: 'xiflezxu0f' },
-  { title: 'Will this work for my industry?', description: 'Where Meta ads work for high-ticket offers, where they do not, and how we tell the difference.', mediaId: 'xiflezxu0f' },
-  { title: 'Who is this not a good fit for?', description: 'The businesses we turn away, and why we would rather say so on the first call.', mediaId: 'xiflezxu0f' },
-  { title: 'How much do I need to spend on ads?', description: 'The budget it takes to get a clear read on Meta, and how spend scales once something works.', mediaId: 'xiflezxu0f' },
-  { title: 'How do I know this will pay for itself?', description: 'How we track every dollar through to the sale, so you can see what the spend is earning.', mediaId: 'xiflezxu0f' }
+  { title: 'How fast will I start seeing results?', description: 'Most clients get leads in the first week, and some get them on day one. The first 30 days are for testing, so leads can come in up and down. After day 30, we know what works, and your leads become steady.', mediaId: 'bpv99rg1s7' },
+  { title: 'Will the leads be qualified?', description: 'Yes. We study your best clients first, then write ads that speak to them and turn off people who aren’t a fit. Our forms ask questions that screen out bad leads before they reach your calendar.', mediaId: 'seqrablzlp' },
+  { title: "What's the process and how long does it take?", description: 'In week one, we learn your business and plan your offer. In weeks two to four, we build your ads, pages and follow-up. Your ads go live in week five, and we meet with you every two weeks.', mediaId: 'sa9ey0fli1' },
+  { title: 'What are my responsibilities and time commitment?', description: 'Plan on 3 to 4 hours at the start, mostly for a strategy call and filming your videos. After that, it’s about 2 to 3 hours a month to film new ads. Our team does the rest.', mediaId: 'lvdaj6xcdi' },
+  { title: 'Will this work for my industry?', description: 'Your offer matters more than your industry. This works best for B2B businesses with a proven offer and clients worth $5,000 or more. You bring the industry know-how, and we bring the marketing.', mediaId: 'i0htd9k0jd' },
+  { title: 'How much do I need to spend on ads?', description: 'The minimum is $50 a day, but we recommend $100 a day or more. More spend means faster testing and faster results. Pick an amount you can keep up for at least 45 days. Ad spend goes straight to Meta and is separate from our fee.', mediaId: 'tgc4g8rz5z' },
+  { title: 'Can I speak to some of your clients before the call?', description: 'We used to do this, but it took up our clients’ time, so we stopped. When you work with us, no one will ever ask you to take calls either. You can see real results on our website and ask me anything on our call.', mediaId: 'mbmqdq979t' },
+  { title: 'What if it doesn’t work? Is there a guarantee?', description: 'Yes. If we don’t help you make back what you invested, we keep working for free until we do. We only win when you win.', mediaId: 'cdol0kgf8o' }
 ];
 
 function WistiaVideo({ mediaId, label, className = '' }) {
@@ -44,6 +44,20 @@ function WistiaVideo({ mediaId, label, className = '' }) {
 const ThankYou = () => {
   const containerRef = useRef(null);
 
+  // Wistia needs player.js (already in index.html) plus one embed script per
+  // media ID. Add the ones this page uses, once.
+  useEffect(() => {
+    const ids = [CONFIRM_VIDEO.mediaId, ...QUESTION_VIDEOS.map((q) => q.mediaId)].filter(Boolean);
+    ids.forEach((id) => {
+      if (document.querySelector(`script[src="https://fast.wistia.com/embed/${id}.js"]`)) return;
+      const script = document.createElement('script');
+      script.src = `https://fast.wistia.com/embed/${id}.js`;
+      script.async = true;
+      script.type = 'module';
+      document.head.appendChild(script);
+    });
+  }, []);
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from('.ty-elem', {
@@ -63,16 +77,16 @@ const ThankYou = () => {
 
       {/* HEADLINE + CONFIRMATION VIDEO */}
       <div className="w-full hero-light relative overflow-hidden">
-        <div className="w-full max-w-5xl mx-auto px-6 pt-12 md:pt-16 pb-16 md:pb-20 flex flex-col items-center text-center relative z-10">
+        <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 pt-10 pb-12 sm:pt-12 sm:pb-16 md:pt-16 md:pb-20 flex flex-col items-center text-center relative z-10">
 
           <div className="ty-elem mb-8 flex justify-center">
             <img src="/logo-black.png" alt="Demand Dynasty" className="h-10 md:h-11 w-auto object-contain" />
           </div>
 
-          <h1 className="ty-elem display text-4xl md:text-6xl mb-4">
+          <h1 className="ty-elem display text-[30px] sm:text-4xl md:text-6xl mb-4 [text-wrap:balance]">
             Wait… your booking isn't <em className="text-brand-olive">confirmed yet.</em>
           </h1>
-          <p className="ty-elem text-[17px] md:text-xl text-brand-muted max-w-2xl mx-auto mb-10">
+          <p className="ty-elem text-base sm:text-[17px] md:text-xl text-brand-muted max-w-2xl mx-auto mb-8 md:mb-10">
             Watch the entire video below to lock in your spot.
           </p>
 
@@ -87,14 +101,14 @@ const ThankYou = () => {
       </div>
 
       {/* THE QUESTIONS */}
-      <section className="w-full bg-brand-soft border-t border-brand-line py-20 md:py-24">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-14">
+      <section className="w-full bg-brand-soft border-t border-brand-line py-14 sm:py-20 md:py-24">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 md:mb-14">
             <p className="kicker mb-4">Do your research</p>
-            <h2 className="display text-4xl md:text-5xl max-w-3xl mx-auto mb-5">
+            <h2 className="display text-[28px] sm:text-4xl md:text-5xl max-w-3xl mx-auto mb-5 [text-wrap:balance]">
               The {QUESTION_VIDEOS.length} most common questions people ask <em className="text-brand-olive">before speaking with us.</em>
             </h2>
-            <p className="text-[17px] text-brand-muted max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-[17px] text-brand-muted max-w-2xl mx-auto leading-relaxed">
               Skip to whichever one you care about. Watch them all if you want to show up fully informed.
             </p>
           </div>
@@ -121,7 +135,7 @@ const ThankYou = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="w-full mt-auto py-8 text-center flex flex-col items-center justify-center gap-2 bg-brand-dark">
+      <footer className="w-full mt-auto py-8 px-6 text-center flex flex-col items-center justify-center gap-2 bg-brand-dark">
         <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-white/35">&copy; {new Date().getFullYear()} Demand Dynasty. All rights reserved.</div>
       </footer>
     </div>

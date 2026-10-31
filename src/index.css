@@ -91,6 +91,13 @@
   .logo-marquee-track { animation: none; }
 }
 
+/* Hold a 16:9 box while a Wistia player boots so the page doesn't jump */
+wistia-player:not(:defined) {
+  display: block;
+  padding-top: 56.25%;
+  background: #0c0d10;
+}
+
 /* Custom scrollbar for webkit */
 ::-webkit-scrollbar {
   width: 8px;

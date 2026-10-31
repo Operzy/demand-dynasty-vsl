@@ -104,7 +104,7 @@ const QualifierModal = ({ onClose, onComplete }) => {
       {/* Modal */}
       <div 
         ref={modalRef}
-        className="relative w-full max-w-lg bg-white text-brand-ink rounded-card border border-brand-line shadow-2xl overflow-hidden"
+        className="relative w-full max-w-lg max-h-[calc(100dvh-2rem)] overflow-y-auto bg-white text-brand-ink rounded-card border border-brand-line shadow-2xl"
       >
         <div className="absolute top-0 left-0 w-full h-1 bg-brand-soft">
           <div 
@@ -120,7 +120,7 @@ const QualifierModal = ({ onClose, onComplete }) => {
           <X size={20} />
         </button>
 
-        <div className="p-8 md:p-10 min-h-[360px] flex flex-col" ref={contentRef}>
+        <div className="p-6 sm:p-8 md:p-10 min-h-[360px] flex flex-col" ref={contentRef}>
           {step === 1 && (
             <div className="flex-1 flex flex-col justify-center">
               <span className="kicker mb-3">Question 1 of 3</span>
