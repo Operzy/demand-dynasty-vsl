@@ -58,7 +58,7 @@ const Booking = () => {
             {/* Calendly inline widget begin */}
             <div 
               className="calendly-inline-widget w-full" 
-              data-url="https://calendly.com/operzy/discovery-meeting-with-jake?primary_color=101112" 
+              data-url="https://calendly.com/demanddynasty/discovery-meeting-with-jake?primary_color=101112" 
               style={{ minWidth: '320px', height: '1050px' }}
             ></div>
             {/* Calendly inline widget end */}
